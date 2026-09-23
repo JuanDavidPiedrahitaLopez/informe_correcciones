@@ -57,7 +57,7 @@
 \midrule
 30 & Tilde faltante en parámetro \\
 \midrule
-32 & Aclaración: en el libro ``Time Series -- Wei (uno de los libros de referencia para este capítulo)'' en la expresión de definición del polinomio de media móvil estacional (expresión 8.33, página 166) los coeficientes del polinomio mencionado aparecen con el signo negativo. Sin embargo, en el libro \textit{Time Series Analysis and Its Applications} de Shumway (definición 3.12 -- página 154), los mismos coeficientes aparecen con signo positivo. Se realiza entonces la corrección de signos siguiendo la notación de esta última referencia. \\
+32 & (observación 3)  Aclaración: en el libro ``Time Series -- Wei (uno de los libros de referencia para este capítulo)'' en la expresión de definición del polinomio de media móvil estacional (expresión 8.33, página 166) los coeficientes del polinomio mencionado aparecen con el signo negativo. Sin embargo, en el libro \textit{Time Series Analysis and Its Applications} de Shumway (definición 3.12 -- página 154), los mismos coeficientes aparecen con signo positivo. Se realiza entonces la corrección de signos siguiendo la notación de esta última referencia. \\
 \midrule
 38 & Corrección palabra ``ensamble'' \\
 \midrule
@@ -71,7 +71,7 @@
 \midrule
 58 & Corrección expresión ``la matriz de los pesos'' \\
 \midrule
-64 & Corrección palabra ``inconveniente'' y anexo de conector ``y'' en la expresión ``\ldots\ a través del estado $h_T$ y del estado $h_{t-1}$'' \\
+64 & Corrección palabra ``inconveniente'' y anexo de conector ``y'' en la expresión ``\ldots\ a través del estado $h_t$ y del estado $h_{t-1}$'' \\
 \midrule
 65 & Corrección palabra ``trabajar'' \\
 \midrule
@@ -87,7 +87,7 @@
     \item esencia
 \end{itemize} \\
 \midrule
-83 & Corrección fecha pie de figura 6.1 (es 01 de enero de 2015) \\
+83 & (Observación 4) Corrección fecha pie de figura 6.1 (es 01 de enero de 2015) \\
 \midrule
 85 & Corrección expresión ``adicional'' \\
 \midrule
@@ -95,11 +95,11 @@
 \midrule
 97 & Eliminación expresión duplicada ``La partición contiene 517 observaciones en TrainG y 58 en TestF'' \\
 \midrule
-109 & Se anexa comentario aclaratorio respecto a la definición de los pesos para la predicción combinada a partir del conjunto TestF: dado que los pesos del esquema de combinación se calcularon a partir del desempeño de los modelos individuales sobre el mismo conjunto TestF empleado posteriormente para evaluar la predicción combinada, este procedimiento presenta una limitación al momento de extrapolar el comportamiento del ensamble a datos futuros no observados de la serie. Como posible extensión, los pesos podrían estimarse utilizando un conjunto de validación previo e independiente, reservando posteriormente un conjunto de prueba final para comparar tanto las predicciones individuales como la predicción combinada sobre datos que no hayan intervenido en la definición de dichos pesos. \\
+109 & Se anexa comentario en las conclusiones (observación 1)  respecto a la definición de los pesos para la predicción combinada a partir del conjunto TestF: dado que los pesos del esquema de combinación se calcularon a partir del desempeño de los modelos individuales sobre el mismo conjunto TestF empleado posteriormente para evaluar la predicción combinada, este procedimiento presenta una limitación al momento de extrapolar el comportamiento del ensamble a datos futuros no observados de la serie. Como posible extensión, los pesos podrían estimarse utilizando un conjunto de validación previo e independiente, reservando posteriormente un conjunto de prueba final para comparar tanto las predicciones individuales como la predicción combinada sobre datos que no hayan intervenido en la definición de dichos pesos. \\
 \midrule
-92--96 & Respecto a la mención hecha sobre la discrepancia en las fechas usadas para las predicciones del XGBoost, se realizó la siguiente corrección: primero se tomó la serie original y se partió siguiendo el esquema propuesto para los demás modelos (90-10) de forma preliminar. Se guardó la fecha en la que se realiza esta partición, y luego se definen las variables respectivas de la forma en la que estaba definida previamente y se eliminan las variables con valores NaN. Luego de esto se definieron los conjuntos TrainG y TestF finales, teniendo que TestF se define desde la fecha almacenada previamente. Así, aunque el conjunto de entrenamiento tiene menos valores respecto a los demás conjuntos de entrenamiento, las cantidades del conjunto TestF se mantienen con relación a los demás. Aunque hay ligeras variaciones en los valores de las métricas e hiperparámetros presentados inicialmente, el comportamiento y las conclusiones descritos para los histogramas de los errores y desempeño del modelo se mantienen. \\
+92--96 & Respecto a la mención (observación 2) hecha sobre la discrepancia en las fechas usadas para las predicciones del XGBoost, se realizó la siguiente corrección: primero se tomó la serie original y se partió siguiendo el esquema propuesto para los demás modelos (90-10) de forma preliminar. Se guardó la fecha en la que se realiza esta partición, y luego se definen las variables respectivas de la forma en la que estaba definida previamente y se eliminan las variables con valores NaN. Luego de esto se definieron los conjuntos TrainG y TestF finales, teniendo que TestF se define desde la fecha almacenada previamente. Así, aunque el conjunto de entrenamiento tiene menos valores respecto a los demás conjuntos de entrenamiento, las cantidades del conjunto TestF se mantienen con relación a los demás. Aunque hay ligeras variaciones en los valores de las métricas e hiperparámetros presentados inicialmente, el comportamiento y las conclusiones descritos para los histogramas de los errores y desempeño del modelo se mantienen. \\
 \midrule
--- & Se corrigieron las métricas del modelo NeuralProphet, dado que los resultados proporcionados en la primera versión hacían referencia a una ejecución anterior del notebook del modelo asociado. Esta corrección no afecta las conclusiones respecto a la ponderación de las predicciones. \\
+-- & Se corrigieron las métricas del modelo NeuralProphet, dado que los resultados proporcionados en la primera versión hacían referencia a una ejecución anterior del notebook del modelo asociado. Esta corrección no afecta las conclusiones respecto al desempeño individual de los modelos ni a la ponderación de las predicciones. \\
 
 \end{longtable}
 
